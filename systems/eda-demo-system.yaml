@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: eda-demo
+  description: Demo the EDA capability for this platform to simplify development
+  labels:
+    size: small
+    environments: build-dev-qa-prod
+spec:
+  owner: developers
