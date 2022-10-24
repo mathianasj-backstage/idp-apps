@@ -1,0 +1,56 @@
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: eda-demo-build
+  labels:
+    app : eda-demo
+    team: developers
+    build-namespace: eda-demo-build
+    size: small
+    environment: build
+    goldilocks.fairwinds.com/enabled: "true"
+    argocd.argoproj.io/managed-by: openshift-gitops
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: eda-demo-dev
+  labels:
+    app : eda-demo
+    team: developers
+    build-namespace: eda-demo-build
+    size: small
+    environment: dev
+    goldilocks.fairwinds.com/enabled: "true"
+    argocd.argoproj.io/managed-by: openshift-gitops
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: eda-demo-qa
+  labels:
+    app : eda-demo
+    team: developers
+    build-namespace: eda-demo-build
+    size: small
+    environment: qa
+    goldilocks.fairwinds.com/enabled: "true"
+    argocd.argoproj.io/managed-by: openshift-gitops
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: eda-demo-prod
+  labels:
+    app : eda-demo
+    team: developers
+    build-namespace: eda-demo-build
+    size: small
+    environment: prod
+    goldilocks.fairwinds.com/enabled: "true"
+    argocd.argoproj.io/managed-by: openshift-gitops
