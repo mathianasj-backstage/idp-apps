@@ -11,7 +11,7 @@ metadata:
     size: small
     environment: build
     goldilocks.fairwinds.com/enabled: "true"
-    argocd.argoproj.io/managed-by: test-build
+    argocd.argoproj.io/managed-by: openshift-gitops
 
 ---
 apiVersion: v1
@@ -25,7 +25,7 @@ metadata:
     size: small
     environment: dev
     goldilocks.fairwinds.com/enabled: "true"
-    argocd.argoproj.io/managed-by: test-build
+    argocd.argoproj.io/managed-by: openshift-gitops
 
 ---
 apiVersion: v1
@@ -39,7 +39,7 @@ metadata:
     size: small
     environment: qa
     goldilocks.fairwinds.com/enabled: "true"
-    argocd.argoproj.io/managed-by: test-build 
+    argocd.argoproj.io/managed-by: openshift-gitops
 
 ---
 apiVersion: v1
@@ -53,4 +53,4 @@ metadata:
     size: small
     environment: prod
     goldilocks.fairwinds.com/enabled: "true"
-    argocd.argoproj.io/managed-by: test-build 
+    argocd.argoproj.io/managed-by: openshift-gitops
