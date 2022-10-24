@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: test-root-application
-  namespace: openshift-gitops
+  namespace: test-build
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
