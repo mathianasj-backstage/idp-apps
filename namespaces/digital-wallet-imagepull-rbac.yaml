@@ -1,0 +1,64 @@
+
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: digital-wallet-build
+  namespace: digital-wallet-build
+subjects:
+  - kind: ServiceAccount
+    name: default
+    namespace: digital-wallet-build
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: 'system:image-puller'
+
+
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: digital-wallet-dev
+  namespace: digital-wallet-build
+subjects:
+  - kind: ServiceAccount
+    name: default
+    namespace: digital-wallet-dev
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: 'system:image-puller'
+
+
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: digital-wallet-qa
+  namespace: digital-wallet-build
+subjects:
+  - kind: ServiceAccount
+    name: default
+    namespace: digital-wallet-qa
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: 'system:image-puller'
+
+
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: digital-wallet-prod
+  namespace: digital-wallet-build
+subjects:
+  - kind: ServiceAccount
+    name: default
+    namespace: digital-wallet-prod
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: 'system:image-puller'
+

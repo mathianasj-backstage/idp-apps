@@ -1,0 +1,56 @@
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: digital-wallet-build
+  labels:
+    app : digital-wallet
+    team: developers
+    build-namespace: digital-wallet-build
+    size: small
+    environment: build
+    goldilocks.fairwinds.com/enabled: "true"
+    argocd.argoproj.io/managed-by: openshift-gitops
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: digital-wallet-dev
+  labels:
+    app : digital-wallet
+    team: developers
+    build-namespace: digital-wallet-build
+    size: small
+    environment: dev
+    goldilocks.fairwinds.com/enabled: "true"
+    argocd.argoproj.io/managed-by: openshift-gitops
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: digital-wallet-qa
+  labels:
+    app : digital-wallet
+    team: developers
+    build-namespace: digital-wallet-build
+    size: small
+    environment: qa
+    goldilocks.fairwinds.com/enabled: "true"
+    argocd.argoproj.io/managed-by: openshift-gitops
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: digital-wallet-prod
+  labels:
+    app : digital-wallet
+    team: developers
+    build-namespace: digital-wallet-build
+    size: small
+    environment: prod
+    goldilocks.fairwinds.com/enabled: "true"
+    argocd.argoproj.io/managed-by: openshift-gitops
